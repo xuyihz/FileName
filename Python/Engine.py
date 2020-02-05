@@ -9,8 +9,12 @@ import os
 
 class Engine(object):
 
-    def __init__(self, Fdir):
+    def __init__(self, Fdir, ext_src, ext_dst, namesep):
         self.Fdir = Fdir
+        self.ext_src = ext_src
+        self.ext_dst = ext_dst
+        self.namesep = namesep
+
         self.Jdir = Fdir
         self.Jname = 'FNdata'
         self.Jencode = 'utf-8'
@@ -19,24 +23,16 @@ class Engine(object):
         self.Jsort = True
 
     # generate part
-    def genFNJson(self, ext, namesep):
-        FNList = self.getFNList(ext, namesep)
+    def genFNJson(self):
+        FNList = self.getFNList()
         # clear existing file.
         with open(self.Jpath, 'w', encoding=self.Jencode) as f:
             pass
         self.FNList2J(FNList)
 
-    def getFNList(self, ext, namesep):
+    def getFNList(self):
         FNList = []
-        with os.scandir(self.Fdir) as DEit:
-            for entry in DEit:
-                if entry.is_dir():
-                    pass
-                elif entry.is_file():
-                    (dirnameTMP, extension) = os.path.splitext(entry.path)
-                    if extension == ext:
-                        FNdict = FN(entry.path, namesep).__dict__
-                        FNList.append(FNdict)
+        FNList = self.DEIterator(FNList, 'gen')
         return FNList
 
     def FNList2J(self, FNList):  # store filename dict in a json file
@@ -44,21 +40,32 @@ class Engine(object):
         JFtmp.writeJson(FNList, self.Jindent, self.Jsort)
 
     # rename part
-    def reJsonFN(self, ext_src, ext_dst, namesep):
-        i = 0
+    def reJsonFN(self):
         FNList = self.J2FNList()
+        FNList = self.DEIterator(FNList, 're')
+
+    def J2FNList(self):  # extract a json file into a dict
+        JFtmp = JF(self.Jdir, self.Jname, self.Jencode)
+        FNList = JFtmp.readJson()
+        return FNList
+
+    # DEIterator part
+    def DEIterator(self, FNList, mtd):
         with os.scandir(self.Fdir) as DEit:
             for entry in DEit:
                 if entry.is_dir():
                     pass
                 elif entry.is_file():
                     (dirname, extension) = os.path.splitext(entry.path)
-                    if extension == ext_src:
-                        FN_dst = FNList[i]['Name'] + ext_dst
-                        os.rename(entry.path, FN_dst)
-                        i += 1
+                    if extension == self.ext_src:
+                        FNList = self.JsonFNfun(FNList, entry, mtd)
+        return FNList
 
-    def J2FNList(self):  # extract a json file into a dict
-        JFtmp = JF(self.Jdir, self.Jname, self.Jencode)
-        FNList = JFtmp.readJson()
+    def JsonFNfun(self, FNList, entry, mtd):
+        if mtd == 'gen':
+            FNdict = FN(entry.path, self.namesep).__dict__
+            FNList.append(FNdict)
+        elif mtd == 're':
+            FN_dst = FNList.pop(0)['Name'] + self.ext_dst
+            os.rename(entry.path, FN_dst)
         return FNList

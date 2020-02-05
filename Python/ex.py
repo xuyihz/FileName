@@ -6,10 +6,10 @@ ext_src = '.py'  # source extension
 ext_dst = '.py'  # destination extension
 namesep = '_'
 Dirname = os.path.dirname(__file__)  # folder path
-EGobj = EG(Dirname)
+EGobj = EG(Dirname, ext_src, ext_dst, namesep)
 
 # generate
-EGobj.genFNJson(ext_src, namesep)
+EGobj.genFNJson()
 
 # rename
-# EGobj.reJsonFN(ext_src, ext_dst, namesep)
+# EGobj.reJsonFN()
