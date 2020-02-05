@@ -1,0 +1,32 @@
+[
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "1",
+        "NameSplit": [
+            "1"
+        ],
+        "basename": "1.txt",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\1.txt"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "2",
+        "NameSplit": [
+            "2"
+        ],
+        "basename": "2.txt",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\2.txt"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "3",
+        "NameSplit": [
+            "3"
+        ],
+        "basename": "3.txt",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\3.txt"
+    }
+]

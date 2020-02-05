@@ -10,6 +10,6 @@ class FileName(object):
     def __init__(self, path, namesep):
         self.path = path
         self.DirName = os.path.dirname(path)
-        basename = os.path.basename(path)
-        (self.Name, self.Extension) = os.path.splitext(basename)
+        self.basename = os.path.basename(path)
+        (self.Name, self.Extension) = os.path.splitext(self.basename)
         self.NameSplit = self.Name.split(namesep)
