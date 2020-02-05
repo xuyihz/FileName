@@ -1,32 +1,42 @@
 [
     {
         "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
-        "Name": "1",
+        "Extension": ".py",
+        "Name": "Engine",
         "NameSplit": [
-            "1"
+            "Engine"
         ],
-        "basename": "1.txt",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\1.txt"
+        "basename": "Engine.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\Engine.py"
     },
     {
         "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
-        "Name": "2",
+        "Extension": ".py",
+        "Name": "ex",
         "NameSplit": [
-            "2"
+            "ex"
         ],
-        "basename": "2.txt",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\2.txt"
+        "basename": "ex.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\ex.py"
     },
     {
         "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
-        "Name": "3",
+        "Extension": ".py",
+        "Name": "FileName",
         "NameSplit": [
-            "3"
+            "FileName"
         ],
-        "basename": "3.txt",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\3.txt"
+        "basename": "FileName.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\FileName.py"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".py",
+        "Name": "JsonFile",
+        "NameSplit": [
+            "JsonFile"
+        ],
+        "basename": "JsonFile.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\JsonFile.py"
     }
 ]

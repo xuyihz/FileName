@@ -2,7 +2,7 @@ from Engine import Engine as EG
 import os
 
 
-ext = '.txt'
+ext = '.py'
 namesep = '_'
 Dirname = os.path.dirname(__file__)
 EGobj = EG(Dirname)
@@ -11,4 +11,4 @@ EGobj = EG(Dirname)
 EGobj.genFNJson(ext, namesep)
 
 # rename
-EGobj.reJsonFN(ext, namesep)
+# EGobj.reJsonFN(ext, namesep)
