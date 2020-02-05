@@ -44,7 +44,7 @@ class Engine(object):
         JFtmp.writeJson(FNList, self.Jindent, self.Jsort)
 
     # rename part
-    def reJsonFN(self, ext, namesep):
+    def reJsonFN(self, ext_src, ext_dst, namesep):
         i = 0
         FNList = self.J2FNList()
         with os.scandir(self.Fdir) as DEit:
@@ -53,8 +53,9 @@ class Engine(object):
                     pass
                 elif entry.is_file():
                     (dirname, extension) = os.path.splitext(entry.path)
-                    if extension == ext:
-                        os.rename(entry.path, FNList[i]['basename'])
+                    if extension == ext_src:
+                        FN_dst = FNList[i]['Name'] + ext_dst
+                        os.rename(entry.path, FN_dst)
                         i += 1
 
     def J2FNList(self):  # extract a json file into a dict
