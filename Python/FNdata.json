@@ -38,5 +38,35 @@
         ],
         "basename": "JsonFile.py",
         "path": "c:/Users/XYGC/Desktop/FileName/Python\\JsonFile.py"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".py",
+        "Name": "MainWin",
+        "NameSplit": [
+            "MainWin"
+        ],
+        "basename": "MainWin.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\MainWin.py"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".py",
+        "Name": "run",
+        "NameSplit": [
+            "run"
+        ],
+        "basename": "run.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\run.py"
+    },
+    {
+        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".py",
+        "Name": "SignalSlot",
+        "NameSplit": [
+            "SignalSlot"
+        ],
+        "basename": "SignalSlot.py",
+        "path": "c:/Users/XYGC/Desktop/FileName/Python\\SignalSlot.py"
     }
 ]

@@ -9,13 +9,13 @@ import os
 
 class Engine(object):
 
-    def __init__(self, Fdir, ext_src, ext_dst, namesep):
-        self.Fdir = Fdir
-        self.ext_src = ext_src
-        self.ext_dst = ext_dst
-        self.namesep = namesep
+    def __init__(self):
+        self.Fdir = ''
+        self.ext_src = ''
+        self.ext_dst = ''
+        self.namesep = ''
 
-        self.Jdir = Fdir
+        self.Jdir = ''
         self.Jname = 'FNdata'
         self.Jencode = 'utf-8'
         self.Jpath = JF(self.Jdir, self.Jname, self.Jencode).Jpath
