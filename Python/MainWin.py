@@ -8,9 +8,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from Engine import Engine as EG
+import os
 
 
 class Ui_MainWindow(object):
+    def __init__(self):
+        self.ModelObj = EG()
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(456, 453)
@@ -47,6 +52,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pushButton_1.clicked.connect(self.openFile)  # find the feature file
+        self.pushButton_2.clicked.connect(self.renameFile)  # rename
+        self.pushButton_3.clicked.connect(self.loadJson)  # load json
+        self.pushButton_4.clicked.connect(self.ModelObj.genFNJson)  # write json        
+        self.CloseWinBtn.clicked.connect(MainWindow.close)  # exit
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -57,3 +68,18 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(_translate("MainWindow", "write json"))
         self.CloseWinBtn.setText(_translate("MainWindow", "exit"))
 
+    def openFile(self):
+        openfileName, openfileType = QtWidgets.QFileDialog.getOpenFileName(None,'choose a file','','')
+        self.ModelObj.Fdir = os.path.dirname(openfileName)
+        self.ModelObj.Jdir = self.ModelObj.Fdir
+
+        basename = os.path.basename(openfileName)
+        (Name, Extension) = os.path.splitext(basename)
+        self.ModelObj.ext_src = Extension
+
+    def loadJson(self):
+        self.ModelObj.FNList = self.ModelObj.J2FNList()
+
+    def renameFile(self):
+        self.ModelObj.ext_dst = '.bmp'
+        self.ModelObj.reJsonFN()

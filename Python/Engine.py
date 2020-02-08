@@ -13,7 +13,7 @@ class Engine(object):
         self.Fdir = ''
         self.ext_src = ''
         self.ext_dst = ''
-        self.namesep = ''
+        self.namesep = '_'
 
         self.Jdir = ''
         self.Jname = 'FNdata'

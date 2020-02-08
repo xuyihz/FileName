@@ -1,72 +1,32 @@
 [
     {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "Engine",
+        "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "1",
         "NameSplit": [
-            "Engine"
+            "1"
         ],
-        "basename": "Engine.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\Engine.py"
+        "basename": "1.txt",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\1.txt"
     },
     {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "ex",
+        "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "2",
         "NameSplit": [
-            "ex"
+            "2"
         ],
-        "basename": "ex.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\ex.py"
+        "basename": "2.txt",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\2.txt"
     },
     {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "FileName",
+        "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
+        "Extension": ".txt",
+        "Name": "3",
         "NameSplit": [
-            "FileName"
+            "3"
         ],
-        "basename": "FileName.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\FileName.py"
-    },
-    {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "JsonFile",
-        "NameSplit": [
-            "JsonFile"
-        ],
-        "basename": "JsonFile.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\JsonFile.py"
-    },
-    {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "MainWin",
-        "NameSplit": [
-            "MainWin"
-        ],
-        "basename": "MainWin.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\MainWin.py"
-    },
-    {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "run",
-        "NameSplit": [
-            "run"
-        ],
-        "basename": "run.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\run.py"
-    },
-    {
-        "DirName": "c:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".py",
-        "Name": "SignalSlot",
-        "NameSplit": [
-            "SignalSlot"
-        ],
-        "basename": "SignalSlot.py",
-        "path": "c:/Users/XYGC/Desktop/FileName/Python\\SignalSlot.py"
+        "basename": "3.txt",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\3.txt"
     }
 ]
