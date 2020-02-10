@@ -4,7 +4,7 @@
 
 import sys
 from PyQt5 import QtWidgets
-from MainWin import Ui_MainWindow
+from MainWinCon import Ui_MainWindow
 
 
 if __name__ == "__main__":

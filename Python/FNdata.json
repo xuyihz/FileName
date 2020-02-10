@@ -1,32 +1,32 @@
 [
     {
         "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
+        "Extension": ".bmp",
         "Name": "1",
         "NameSplit": [
             "1"
         ],
-        "basename": "1.txt",
-        "path": "C:/Users/XYGC/Desktop/FileName/Python\\1.txt"
+        "basename": "1.bmp",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\1.bmp"
     },
     {
         "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
+        "Extension": ".bmp",
         "Name": "2",
         "NameSplit": [
             "2"
         ],
-        "basename": "2.txt",
-        "path": "C:/Users/XYGC/Desktop/FileName/Python\\2.txt"
+        "basename": "2.bmp",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\2.bmp"
     },
     {
         "DirName": "C:/Users/XYGC/Desktop/FileName/Python",
-        "Extension": ".txt",
+        "Extension": ".bmp",
         "Name": "3",
         "NameSplit": [
             "3"
         ],
-        "basename": "3.txt",
-        "path": "C:/Users/XYGC/Desktop/FileName/Python\\3.txt"
+        "basename": "3.bmp",
+        "path": "C:/Users/XYGC/Desktop/FileName/Python\\3.bmp"
     }
 ]
