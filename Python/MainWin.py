@@ -1,88 +1,98 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainWin.ui'
-#
-# Created by: PyQt5 UI code generator 5.13.2
-#
-# WARNING! All changes made in this file will be lost!
+################################################################################
+## Form generated from reading UI file 'MainWin.ui'
+##
+## Created by: Qt User Interface Compiler version 5.14.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
-
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+    QRect, QSize, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
+    QRadialGradient)
+from PySide2.QtWidgets import *
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        if MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(456, 453)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
-        self.pushButton_dir = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_dir.setGeometry(QtCore.QRect(30, 20, 81, 31))
-        self.pushButton_dir.setObjectName("pushButton_dir")
-        self.filelistView_1 = QtWidgets.QListView(self.centralwidget)
-        self.filelistView_1.setGeometry(QtCore.QRect(30, 141, 181, 141))
-        self.filelistView_1.setObjectName("filelistView_1")
-        self.pushButton_rename = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_rename.setGeometry(QtCore.QRect(330, 70, 81, 31))
-        self.pushButton_rename.setObjectName("pushButton_rename")
-        self.pushButton_loadjson = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_loadjson.setGeometry(QtCore.QRect(130, 70, 81, 31))
-        self.pushButton_loadjson.setObjectName("pushButton_loadjson")
-        self.pushButton_writejson = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_writejson.setGeometry(QtCore.QRect(30, 70, 81, 31))
-        self.pushButton_writejson.setObjectName("pushButton_writejson")
-        self.filelistView_2 = QtWidgets.QListView(self.centralwidget)
-        self.filelistView_2.setGeometry(QtCore.QRect(230, 141, 181, 141))
-        self.filelistView_2.setObjectName("filelistView_2")
-        self.CloseWinBtn = QtWidgets.QPushButton(self.centralwidget)
-        self.CloseWinBtn.setGeometry(QtCore.QRect(30, 300, 381, 31))
-        self.CloseWinBtn.setObjectName("CloseWinBtn")
-        self.textBrowser_dir = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_dir.setGeometry(QtCore.QRect(130, 20, 281, 31))
-        self.textBrowser_dir.setObjectName("textBrowser_dir")
-        self.textBrowser_src = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_src.setGeometry(QtCore.QRect(30, 110, 181, 21))
-        self.textBrowser_src.setObjectName("textBrowser_src")
-        self.textBrowser_des = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_des.setGeometry(QtCore.QRect(230, 110, 181, 21))
-        self.textBrowser_des.setObjectName("textBrowser_des")
-        self.lineEdit_ext = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_ext.setGeometry(QtCore.QRect(230, 70, 81, 31))
-        self.lineEdit_ext.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_ext.setObjectName("lineEdit_ext")
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.pushButton_dir = QPushButton(self.centralwidget)
+        self.pushButton_dir.setObjectName(u"pushButton_dir")
+        self.pushButton_dir.setGeometry(QRect(30, 20, 81, 31))
+        self.pushButton_rename = QPushButton(self.centralwidget)
+        self.pushButton_rename.setObjectName(u"pushButton_rename")
+        self.pushButton_rename.setGeometry(QRect(330, 70, 81, 31))
+        self.pushButton_loadjson = QPushButton(self.centralwidget)
+        self.pushButton_loadjson.setObjectName(u"pushButton_loadjson")
+        self.pushButton_loadjson.setGeometry(QRect(130, 70, 81, 31))
+        self.pushButton_writejson = QPushButton(self.centralwidget)
+        self.pushButton_writejson.setObjectName(u"pushButton_writejson")
+        self.pushButton_writejson.setGeometry(QRect(30, 70, 81, 31))
+        self.CloseWinBtn = QPushButton(self.centralwidget)
+        self.CloseWinBtn.setObjectName(u"CloseWinBtn")
+        self.CloseWinBtn.setGeometry(QRect(30, 300, 381, 31))
+        self.textBrowser_dir = QTextBrowser(self.centralwidget)
+        self.textBrowser_dir.setObjectName(u"textBrowser_dir")
+        self.textBrowser_dir.setGeometry(QRect(130, 20, 281, 31))
+        self.textBrowser_src = QTextBrowser(self.centralwidget)
+        self.textBrowser_src.setObjectName(u"textBrowser_src")
+        self.textBrowser_src.setGeometry(QRect(30, 110, 181, 21))
+        self.textBrowser_dst = QTextBrowser(self.centralwidget)
+        self.textBrowser_dst.setObjectName(u"textBrowser_dst")
+        self.textBrowser_dst.setGeometry(QRect(230, 110, 181, 21))
+        self.lineEdit_ext = QLineEdit(self.centralwidget)
+        self.lineEdit_ext.setObjectName(u"lineEdit_ext")
+        self.lineEdit_ext.setGeometry(QRect(230, 70, 81, 31))
+        self.lineEdit_ext.setAlignment(Qt.AlignCenter)
+        self.tableView_src = QTableView(self.centralwidget)
+        self.tableView_src.setObjectName(u"tableView_src")
+        self.tableView_src.setGeometry(QRect(30, 140, 181, 141))
+        self.tableView_dst = QTableView(self.centralwidget)
+        self.tableView_dst.setObjectName(u"tableView_dst")
+        self.tableView_dst.setGeometry(QRect(230, 140, 181, 141))
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 456, 18))
-        self.menubar.setObjectName("menubar")
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 456, 22))
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
 
     def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton_dir.setText(_translate("MainWindow", "find dirpath"))
-        self.pushButton_rename.setText(_translate("MainWindow", "rename file"))
-        self.pushButton_loadjson.setText(_translate("MainWindow", "load json"))
-        self.pushButton_writejson.setText(_translate("MainWindow", "write json"))
-        self.CloseWinBtn.setText(_translate("MainWindow", "exit"))
-        self.textBrowser_dir.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.pushButton_dir.setText(QCoreApplication.translate("MainWindow", u"find dirpath", None))
+        self.pushButton_rename.setText(QCoreApplication.translate("MainWindow", u"rename file", None))
+        self.pushButton_loadjson.setText(QCoreApplication.translate("MainWindow", u"load json", None))
+        self.pushButton_writejson.setText(QCoreApplication.translate("MainWindow", u"write json", None))
+        self.CloseWinBtn.setText(QCoreApplication.translate("MainWindow", u"exit", None))
+        self.textBrowser_dir.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\';\"><br /></p></body></html>"))
-        self.textBrowser_src.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.textBrowser_src.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun\';\">file name (source)</span></p></body></html>"))
-        self.textBrowser_des.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">file name (source)</p></body></html>", None))
+        self.textBrowser_dst.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun\';\">file name (destination)</span></p></body></html>"))
-        self.lineEdit_ext.setText(_translate("MainWindow", "ext"))
+"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">file name (destination)</p></body></html>", None))
+        self.lineEdit_ext.setText(QCoreApplication.translate("MainWindow", u"ext", None))
+    # retranslateUi
+

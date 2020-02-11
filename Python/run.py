@@ -3,7 +3,7 @@
 # 2020
 
 import sys
-from PyQt5 import QtWidgets
+from PySide2 import QtWidgets
 from MainWinCon import Ui_MainWindow
 
 
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     View = Ui_MainWindow()                  # ui是Ui_MainWindow()类的实例化对象
     View.setupUi(MainWindow)                # 执行类中的setupUi方法，方法的参数是第二步中创建的QMainWindow
     MainWindow.show()                       # 执行QMainWindow的show()方法，显示这个QMainWindow
-    sys.exit(app.exec())                    # 使用exit()或者点击关闭按钮退出QApplication
+    sys.exit(app.exec_())                    # 使用exit()或者点击关闭按钮退出QApplication

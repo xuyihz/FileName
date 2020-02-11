@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PySide2 import QtCore, QtGui, QtWidgets
 from MainWin import Ui_MainWindow as MWU
 from Engine import Engine
 import os
@@ -33,12 +33,15 @@ class Ui_MainWindow(MWU):
         openfileName, openfileType = QtWidgets.QFileDialog.getOpenFileName(None,'choose a file','','')
         self.ModelObj.Fdir = os.path.dirname(openfileName)
         self.ModelObj.Jdir = self.ModelObj.Fdir
+        self.textBrowser_dir.setText(self.ModelObj.Fdir)
 
         basename = os.path.basename(openfileName)
         (Name, Extension) = os.path.splitext(basename)
         self.ModelObj.ext_src = Extension
         self.ModelObj.ext_dst = Extension  # assume ext_dst == ext_src
         self.lineEdit_ext.setText(self.ModelObj.ext_dst[1:])
+
+        # self.tableView_src
 
     def loadJson(self):
         self.ModelObj.FNList = self.ModelObj.J2FNList()
@@ -47,4 +50,4 @@ class Ui_MainWindow(MWU):
         self.ModelObj.reJsonFN()
 
     def changeExtDst(self):
-        self.ModelObj.ext_dst = self.lineEdit_ext.text()  # get the text from lineEdit
+        self.ModelObj.ext_dst = '.' + self.lineEdit_ext.text()  # get the text from lineEdit
