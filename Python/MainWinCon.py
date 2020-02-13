@@ -51,10 +51,12 @@ class Ui_MainWindow(MWU):
     def loadJson(self):
         self.ModelObj.FNList = self.ModelObj.J2FNList()
         self.FileNameTable(self.tableView_dst, self.ModelObj.FNList,
-                           self.ModelObj.ext_dst, 'dst Name')
+                           self.ModelObj.FNList[0]['Extension'], 'dst Name')
+                           # assume all extensions are the same (FNList[0])
 
     def renameFile(self):
         self.ModelObj.reJsonFN()
+        self.msg()
 
     def changeExtDst(self):
         self.ModelObj.ext_dst = '.' + self.lineEdit_ext.text()  # get the text from lineEdit
@@ -75,3 +77,7 @@ class Ui_MainWindow(MWU):
         TableView.setModel(self.IM)
         # set Section ResizeMode(Stretch)
         TableView.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+
+    def msg(self):
+        QtWidgets.QMessageBox.information(
+            QtWidgets.QWidget(), "Rename file", "Done!")
