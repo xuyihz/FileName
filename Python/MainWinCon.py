@@ -56,7 +56,7 @@ class Ui_MainWindow(MWU):
 
     def renameFile(self):
         self.ModelObj.reJsonFN()
-        self.msg()
+        self.msg("Rename file", "Done!")
 
     def changeExtDst(self):
         self.ModelObj.ext_dst = '.' + self.lineEdit_ext.text()  # get the text from lineEdit
@@ -78,6 +78,6 @@ class Ui_MainWindow(MWU):
         # set Section ResizeMode(Stretch)
         TableView.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
 
-    def msg(self):
+    def msg(self, Title, Content):
         QtWidgets.QMessageBox.information(
-            QtWidgets.QWidget(), "Rename file", "Done!")
+            QtWidgets.QWidget(), Title, Content)
